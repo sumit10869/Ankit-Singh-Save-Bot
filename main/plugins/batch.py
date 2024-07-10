@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
 
-MDB = "mongodb+srv://satyamyt10869:Sumit10869@cluster0.0ojjo0p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
 MONGODB_CONNECTION_STRING = config("MONGODB", default=MDB)
 
 # MongoDB database name and collection name
