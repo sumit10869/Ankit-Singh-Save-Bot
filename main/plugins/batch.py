@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
 
-MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
+MDB = "mongodb+srv://satyamyt10869:Sumit10869@cluster0.0ojjo0p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MONGODB_CONNECTION_STRING = config("MONGODB", default=MDB)
 
 # MongoDB database name and collection name
@@ -156,7 +156,7 @@ async def list_authorized_users(event):
 async def _batch(event):
     user_id = event.sender_id
     if user_id not in AUTHORIZED_USERS:
-        return await event.respond("This command is available to Paid Plan users! Send /plan to know more.")
+        return await event.respond("This command is available to Paid Plan users! ")
   
     user_session = user_sessions.get(user_id)
     if user_session:
@@ -178,8 +178,8 @@ async def _batch(event):
             _range = await conv.get_reply()
             try:
                 value = int(_range.text)
-                if value > 1000:
-                    return await conv.send_message("You can only get upto 1000 files in a single batch...")
+                if value > 10000:
+                    return await conv.send_message("You can only get upto 10k files in a single batch...")
             except ValueError:
                 return await conv.send_message("Range must be an integer!")
 
@@ -211,7 +211,7 @@ async def _batch(event):
                     save_ids_data(ids_data)
         except Exception as e:
             logger.info(e)
-            await conv.send_message("Processed")
+            await conv.send_message("🥰")
           
 @gagan.on(events.NewMessage(incoming=True, pattern='/cancel'))
 async def cancel_command(event):
@@ -234,7 +234,7 @@ async def cancel_command(event):
             # Clear the chunk tasks list
             del chunk_tasks[str(user_id)]
             
-        await event.respond("Operation canceled.")
+        await event.respond("**Cancel Successfull ✅**")
     else:
         await event.respond("There is no operation to cancel.")
 
