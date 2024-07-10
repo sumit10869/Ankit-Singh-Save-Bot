@@ -18,7 +18,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
 
 uvloop.install()
-MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
+MDB = "mongodb+srv://satyamyt10869:Sumit10869@cluster0.0ojjo0p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 API_ID = config("API_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
@@ -26,8 +26,8 @@ SESSION = config("SESSION", default=None)
 FORCESUB = config("FORCESUB", default=None)
 AUTH = config("AUTH", default=None)
 MONGODB = config("MONGODB", default=MDB)
-OWN = 7065117445 # edit this
-GROUP = -1001878947221 # edit this
+OWN = 7004948651 # edit this
+GROUP = -1002242043427 # edit this
 OWNER_ID = int(config("OWNER_ID", default=OWN))
 LOG_GROUP = int(config("LOG_GROUP", default=GROUP))
 
